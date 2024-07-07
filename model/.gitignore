@@ -1,0 +1,40 @@
+# docker 
+bin/
+boot/
+dev/
+etc/
+home/
+lib/
+lib64/
+media/
+mnt/
+opt/
+proc/
+root/
+run/
+sbin/
+srv/
+sys/
+tmp/
+usr/
+var/
+workspace/
+.dockerenv
+
+# cache & log
+**/__pycache__/
+**/log/
+
+# backend
+**/output/
+**env
+
+# model
+**/generation
+
+# omnipose
+**/checkpoint_hpe.pth
+**/checkpoint_ppe.pth
+
+# pg2
+**/checkpoints

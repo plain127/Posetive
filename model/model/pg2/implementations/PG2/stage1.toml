@@ -1,0 +1,55 @@
+title = "PG2"
+
+description = """
+first try
+"""
+#수정1. 경로수정
+[dataset]
+    name = "market"
+    [dataset.path.train]
+        image = "/pg2/data/Market-1501-v15.09.15/bounding_box_train"
+        bone = "/pg2/data/market/train/pose_map_image/"
+        mask = "/pg2/data/market/train/pose_mask_image/"
+        pair = "/pg2/data/market/pairs-train.csv"
+        annotation = "/pg2/data/market/annotation-train.csv"
+    [dataset.path.test]
+        image = "/pg2/data/market/image"
+        bone = "/pg2/data/market/test/pose_map_image/"
+        mask = "/pg2/data/market/test/pose_mask_image/"
+        pair = "/pg2/data/market/pairs-test.csv"
+        annotation = "/pg2/data/market/annotation-test.csv"
+
+[loss]
+    [loss.mask_l1]
+        weight = 10
+        mask_ratio = 1
+
+#수정2. 하이퍼파라미터 수정
+[model]
+    [model.generator1]
+        num_repeat = 5
+        middle_features_dim = 64
+        channels_base = 128
+        image_size = [128, 64]
+
+#수정3. 하이퍼파라미터 수정
+[train]
+    batch_size = 16
+    num_epoch = 2
+    [train.data]
+        replacement = false
+        flip_rate = 0.5
+    [train.generator1]
+        lr = 0.00002
+        beta1 = 0.5
+        beta2 = 0.999
+
+[log]
+    loss_freq = 50
+    check_freq = 1000
+    [log.model_checkpoint]
+        n_saved = 15
+        save_interval = 1000
+    [log.verify]
+        batch_size = 4
+        shuffle = true

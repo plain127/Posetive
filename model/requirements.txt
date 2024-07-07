@@ -1,0 +1,14 @@
+Cython==3.0.10
+imageio
+numpy==1.26.4
+opencv-python
+pandas==2.2.2
+Pillow
+python-dotenv==1.0.1
+pytorch-ignite==0.2.1
+scikit-image==0.22.0
+scipy==1.13.1
+tensorboard==2.17.0
+torch==1.13.0
+torchvision==0.14.0
+tqdm
