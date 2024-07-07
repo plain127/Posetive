@@ -1,6 +1,6 @@
 # 픽토그램 포즈 기반 사람 이미지 생성 모델
 
-![detection](https://github.com/plain127/Posetive/assets/98394884/27cf8ac1-a22a-41c6-beaf-86d065c6db2b)
+![detection](https://github.com/plain127/Posetive/assets/98394884/5c80af1a-3769-4970-9e6a-28b4e5691d0f)
 
 ## Installation
 
